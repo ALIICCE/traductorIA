@@ -6,24 +6,25 @@ CREATE DATABASE db_contabilidad;
 CREATE TABLE palabras_contabilidad (
     id SERIAL PRIMARY KEY,
     palabra TEXT NOT NULL,
-    porcentaje_identidad NUMERIC(4,2),
+    porcentaje_identidad NUMERIC(5,2),
     sinonimos TEXT
 );
 
 -- Insertar datos en la tabla palabras_contabilidad
 INSERT INTO palabras_contabilidad (palabra, porcentaje_identidad, sinonimos) VALUES
-('Activo', 0.95, 'bien, recurso, propiedad'),
-('Pasivo', 0.93, 'deuda, obligación, compromiso'),
-('Capital', 0.90, 'patrimonio, fondos, inversión'),
-('Balance', 0.92, 'estado financiero, resumen contable'),
-('Ingreso', 0.88, 'ganancia, entrada, utilidad'),
-('Egreso', 0.87, 'gasto, salida, desembolso'),
-('Factura', 0.85, 'recibo, comprobante, nota de venta'),
-('Asiento', 0.84, 'registro, anotación, entrada'),
-('Libro diario', 0.80, 'registro diario, libro contable'),
-('Inventario', 0.86, 'existencias, mercancías, stock'),
-('Depreciación', 0.83, 'pérdida de valor, amortización'),
-('Costo', 0.89, 'precio, gasto, inversión'),
-('Beneficio', 0.91, 'ganancia, utilidad, provecho'),
-('Auditoría', 0.88, 'revisión, inspección, verificación'),
-('Contabilidad', 1.00, 'registro financiero, sistema contable');
+('Activo', 100.00, 'bien, recurso, propiedad'),
+('Pasivo', 90.00, 'deuda, obligacion, compromiso'),
+('Capital', 90.00, 'patrimonio, fondos, inversion'),
+('Balance', 90.00, 'estado financiero, resumen contable'),
+('Ingreso', 80.00, 'ganancia, entrada, utilidad'),
+('Egreso', 80.00, 'gasto, salida, desembolso'),
+('Factura', 70.00, 'recibo, comprobante, nota de venta'),
+('Asiento', 70.00, 'registro, anotacion, entrada'),
+('Libro', 60.00, 'registro diario, libro contable'),
+('Diario', 60.00, 'registro diario, libro contable'),
+('Inventario', 80.00, 'existencias, mercancias, stock'),
+('Depreciacion', 70.00, 'perdida de valor, amortizacion'),
+('Costo', 80.00, 'precio, gasto, inversion'),
+('Beneficio', 90.00, 'ganancia, utilidad, provecho'),
+('Auditoria', 80.00, 'revision, inspeccion, verificacion'),
+('Contabilidad', 100.00, 'registro financiero, sistema contable');
