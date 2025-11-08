@@ -15,6 +15,7 @@ Además, incluye un archivo SQL que crea una base de datos local en **PostgreSQL
 
 - **`buscale.py`**  
   Interfaz principal creada con **Streamlit**, que permite ingresar texto y analizar su relación con el tema de contabilidad.
+  Para correrlo poner en terminal: streamlit run buscale.py
 
 - **`algoritmo.py`**  
   Contiene la lógica principal del análisis, limpieza del texto y cálculo del porcentaje de coincidencia usando técnicas de similitud léxica (**RapidFuzz** y **NLTK**).
@@ -35,3 +36,12 @@ DB_USER=postgres
 DB_PASSWORD=tu_contraseña_aquí
 DB_HOST=localhost
 DB_PORT=5432
+```
+## Dependencias necesarias:
+- pip install streamlit
+- pip install pandas
+- pip install altair
+- pip install nltk
+- pip install rapidfuzz
+- pip install psycopg2
+- pip install python-dotenv
