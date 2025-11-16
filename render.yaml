@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: traductorIA
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "streamlit run buscale.py --server.port=$PORT --server.address=0.0.0.0"
+    envVars:
+      PYTHON_VERSION: "3.10.13"
