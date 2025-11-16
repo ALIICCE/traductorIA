@@ -5,9 +5,12 @@ from functools import lru_cache
 from db_connection import conectar_db
 from nltk.corpus import stopwords
 
-nltk.download('stopwords', quiet=True)
-
-
+try:
+    from nltk.corpus import stopwords
+    _ = stopwords.words('spanish')
+except (LookupError, OSError):
+    nltk.download('stopwords', quiet=True)
+    from nltk.corpus import stopwords
 
 # ====== PALABRAS DE LA BASE DE DATOS ======
 @lru_cache(maxsize=1)
